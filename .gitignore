@@ -1,0 +1,10 @@
+# Node_modules
+backend/node_modules
+frontend/node_modules
+
+# Environment files
+.env
+*.env
+
+# API Testing 
+backend/api.http
