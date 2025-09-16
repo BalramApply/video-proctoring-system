@@ -1,5 +1,3 @@
-Here’s the **fitted `README.md`** with your API routes cleaned up, correct markdown formatting, and including **sample `.env` files** for both frontend & backend so new developers can set it up easily:
-
 ````markdown
 # 🎥 Focus & Object Detection in Video Interviews
 
@@ -196,7 +194,4 @@ Feel free to contribute & raise issues!
 
 ---
 
-```
-
-Do you want me to also **add example request/response JSON payloads** for each API endpoint so developers know exactly how to use them?
 ```
