@@ -1,6 +1,6 @@
-Here’s a **complete `README.md`** for your project that includes all features, installation, and usage instructions:
+Here’s the **fitted `README.md`** with your API routes cleaned up, correct markdown formatting, and including **sample `.env` files** for both frontend & backend so new developers can set it up easily:
 
-```markdown
+````markdown
 # 🎥 Focus & Object Detection in Video Interviews
 
 ## 📌 Project Overview
@@ -52,11 +52,9 @@ All events are logged with timestamps, stored in a backend database, and summari
 ---
 
 ## 📂 Project Structure
-```
-
+```bash
 /frontend   → React.js frontend with AI detection
 /backend    → Node.js + Express backend with MongoDB
-
 ````
 
 ---
@@ -64,10 +62,11 @@ All events are logged with timestamps, stored in a backend database, and summari
 ## ⚙️ Installation & Setup
 
 ### 1️⃣ Clone the repository
+
 ```bash
 git clone https://github.com/BalramApply/video-proctoring-system.git
 cd video-proctoring-system
-````
+```
 
 ### 2️⃣ Setup Backend
 
@@ -97,6 +96,12 @@ npm run dev
 ```bash
 cd frontend
 npm install
+```
+
+Create a `.env` file in the `frontend/` folder:
+
+```env
+REACT_APP_API_URL=http://localhost:5000/api
 ```
 
 Start frontend:
@@ -141,17 +146,21 @@ Integrity Score: 85/100
 
 ## 📡 API Endpoints
 
-### Get Interview Report
+### Interview Routes
 
-```
-GET /api/reports/:interviewId
-```
+* `POST /api/interviews/start` → Start an interview
+* `POST /api/interviews/:id/end` → End an interview
+* `GET /api/interviews/:id` → Get interview by ID
+* `GET /api/interviews` → Get all interviews (requires authentication)
 
-### Save Event Log
+### Detection & Logging
 
-```
-POST /api/events
-```
+* `POST /api/detections/log` → Log a detection event
+* `GET /api/detections/:interviewId` → Get detections for a specific interview
+
+### Reports
+
+* `GET /api/reports/:interviewId` → Generate proctoring report
 
 ---
 
@@ -189,5 +198,5 @@ Feel free to contribute & raise issues!
 
 ```
 
-Do you also want me to **add sample `.env` files for both frontend and backend** inside the README so new developers can set it up quickly?
+Do you want me to also **add example request/response JSON payloads** for each API endpoint so developers know exactly how to use them?
 ```
